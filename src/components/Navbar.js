@@ -1,12 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <Navbar className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Ecommerce Cart
-        </a>
+        <LinkContainer to="/">
+          <Nav.Link className="navbar-brand"> Ecommerce Cart</Nav.Link>
+        </LinkContainer>
         <button
           className="navbar-toggler"
           type="button"
@@ -28,17 +31,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Features
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                About
+                Cart
               </a>
             </li>
             <li className="nav-item dropdown">
@@ -50,21 +43,21 @@ const Navbar = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Dropdown
+                New User?
               </a>
               <div className="dropdown-menu">
                 <a className="dropdown-item" href="#">
-                  Action
+                  Login
                 </a>
                 <a className="dropdown-item" href="#">
-                  Another action
+                  Sigup
                 </a>
                 <a className="dropdown-item" href="#">
                   Something else here
                 </a>
                 <div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">
-                  Separated link
+                  Logout
                 </a>
               </div>
             </li>
@@ -81,7 +74,7 @@ const Navbar = () => {
           </form>
         </div>
       </div>
-    </nav>
+    </Navbar>
   );
 };
 
